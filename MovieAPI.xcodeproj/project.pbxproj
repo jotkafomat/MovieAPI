@@ -17,6 +17,9 @@
 		E128DAFA25E6ADEA008957F3 /* MovieAPIResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */; };
 		E128DB0125E6AE3D008957F3 /* Data+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */; };
 		E128DB0C25E6AEFC008957F3 /* movieAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E128DB0B25E6AEFC008957F3 /* movieAPI.json */; };
+		E12B344425E7D35B00B015BF /* MovieAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B344325E7D35B00B015BF /* MovieAPITest.swift */; };
+		E12B344925E7D42600B015BF /* MovieApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B344825E7D42600B015BF /* MovieApi.swift */; };
+		E12B345925E7E46E00B015BF /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B345825E7E46E00B015BF /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E128DAEA25E6A732008957F3 /* MovieAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIResponse.swift; sourceTree = "<group>"; };
 		E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIResponseTest.swift; sourceTree = "<group>"; };
 		E128DB0B25E6AEFC008957F3 /* movieAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movieAPI.json; sourceTree = "<group>"; };
+		E12B344325E7D35B00B015BF /* MovieAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPITest.swift; sourceTree = "<group>"; };
+		E12B344825E7D42600B015BF /* MovieApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApi.swift; sourceTree = "<group>"; };
+		E12B345825E7E46E00B015BF /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 				E128DAB025E6A489008957F3 /* Info.plist */,
 				E128DAAD25E6A489008957F3 /* Preview Content */,
 				E128DAEA25E6A732008957F3 /* MovieAPIResponse.swift */,
+				E12B344825E7D42600B015BF /* MovieApi.swift */,
 			);
 			path = MovieAPI;
 			sourceTree = "<group>";
@@ -128,6 +135,8 @@
 				E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */,
 				E128DB0B25E6AEFC008957F3 /* movieAPI.json */,
 				E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */,
+				E12B344325E7D35B00B015BF /* MovieAPITest.swift */,
+				E12B345825E7E46E00B015BF /* MockURLProtocol.swift */,
 			);
 			path = MovieAPITests;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 				E128DAEB25E6A732008957F3 /* MovieAPIResponse.swift in Sources */,
 				E128DAAA25E6A487008957F3 /* ContentView.swift in Sources */,
 				E128DAA825E6A487008957F3 /* MovieAPIApp.swift in Sources */,
+				E12B344925E7D42600B015BF /* MovieApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12B344425E7D35B00B015BF /* MovieAPITest.swift in Sources */,
 				E128DB0125E6AE3D008957F3 /* Data+Extenstion.swift in Sources */,
 				E128DAFA25E6ADEA008957F3 /* MovieAPIResponseTest.swift in Sources */,
+				E12B345925E7E46E00B015BF /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
