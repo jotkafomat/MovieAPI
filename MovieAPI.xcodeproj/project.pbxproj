@@ -11,8 +11,12 @@
 		E128DAAA25E6A487008957F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAA925E6A487008957F3 /* ContentView.swift */; };
 		E128DAAC25E6A489008957F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E128DAAB25E6A489008957F3 /* Assets.xcassets */; };
 		E128DAAF25E6A489008957F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E128DAAE25E6A489008957F3 /* Preview Assets.xcassets */; };
-		E128DABA25E6A489008957F3 /* MovieAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAB925E6A489008957F3 /* MovieAPITests.swift */; };
 		E128DAC525E6A489008957F3 /* MovieAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAC425E6A489008957F3 /* MovieAPIUITests.swift */; };
+		E128DAD625E6A4BE008957F3 /* movieAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E128DAD525E6A4BE008957F3 /* movieAPI.json */; };
+		E128DAEB25E6A732008957F3 /* MovieAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAEA25E6A732008957F3 /* MovieAPIResponse.swift */; };
+		E128DAFA25E6ADEA008957F3 /* MovieAPIResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */; };
+		E128DB0125E6AE3D008957F3 /* Data+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */; };
+		E128DB0C25E6AEFC008957F3 /* movieAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = E128DB0B25E6AEFC008957F3 /* movieAPI.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +44,15 @@
 		E128DAAE25E6A489008957F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E128DAB025E6A489008957F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E128DAB525E6A489008957F3 /* MovieAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E128DAB925E6A489008957F3 /* MovieAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPITests.swift; sourceTree = "<group>"; };
 		E128DABB25E6A489008957F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E128DAC025E6A489008957F3 /* MovieAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E128DAC425E6A489008957F3 /* MovieAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIUITests.swift; sourceTree = "<group>"; };
 		E128DAC625E6A489008957F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E128DAD525E6A4BE008957F3 /* movieAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movieAPI.json; sourceTree = "<group>"; };
+		E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extenstion.swift"; sourceTree = "<group>"; };
+		E128DAEA25E6A732008957F3 /* MovieAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIResponse.swift; sourceTree = "<group>"; };
+		E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIResponseTest.swift; sourceTree = "<group>"; };
+		E128DB0B25E6AEFC008957F3 /* movieAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movieAPI.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 				E128DAAB25E6A489008957F3 /* Assets.xcassets */,
 				E128DAB025E6A489008957F3 /* Info.plist */,
 				E128DAAD25E6A489008957F3 /* Preview Content */,
+				E128DAEA25E6A732008957F3 /* MovieAPIResponse.swift */,
 			);
 			path = MovieAPI;
 			sourceTree = "<group>";
@@ -115,8 +124,10 @@
 		E128DAB825E6A489008957F3 /* MovieAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				E128DAB925E6A489008957F3 /* MovieAPITests.swift */,
 				E128DABB25E6A489008957F3 /* Info.plist */,
+				E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */,
+				E128DB0B25E6AEFC008957F3 /* movieAPI.json */,
+				E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */,
 			);
 			path = MovieAPITests;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E128DAC425E6A489008957F3 /* MovieAPIUITests.swift */,
+				E128DAD525E6A4BE008957F3 /* movieAPI.json */,
 				E128DAC625E6A489008957F3 /* Info.plist */,
 			);
 			path = MovieAPIUITests;
@@ -242,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E128DB0C25E6AEFC008957F3 /* movieAPI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E128DAD625E6A4BE008957F3 /* movieAPI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E128DAEB25E6A732008957F3 /* MovieAPIResponse.swift in Sources */,
 				E128DAAA25E6A487008957F3 /* ContentView.swift in Sources */,
 				E128DAA825E6A487008957F3 /* MovieAPIApp.swift in Sources */,
 			);
@@ -268,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E128DABA25E6A489008957F3 /* MovieAPITests.swift in Sources */,
+				E128DB0125E6AE3D008957F3 /* Data+Extenstion.swift in Sources */,
+				E128DAFA25E6ADEA008957F3 /* MovieAPIResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
