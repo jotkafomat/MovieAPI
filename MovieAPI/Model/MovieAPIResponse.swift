@@ -8,11 +8,5 @@
 import Foundation
 
 struct MovieAPIResponse: Decodable {
-    let results: [MovieDetails]
-}
-
-struct MovieDetails: Decodable {
-    let title: String
-    let overview: String
-    let posterPath: String
+    let results: [Movie]
 }

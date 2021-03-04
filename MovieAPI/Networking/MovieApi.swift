@@ -9,11 +9,11 @@
 import Foundation
 import Combine
 
-protocol MovieProvider {
-    func getMovieDetails() -> AnyPublisher<[MovieDetails], Never>
+protocol MovieFetcher {
+    func getTopRatedMovies() -> AnyPublisher<[Movie], Never>
 }
 
-class MovieAPI: MovieProvider {
+class MovieAPI: MovieFetcher {
     
     private let session: URLSession
     private let baseUrl: URL
@@ -29,7 +29,7 @@ class MovieAPI: MovieProvider {
         self.baseUrl = baseUrl
     }
     
-    func getMovieDetails() -> AnyPublisher<[MovieDetails], Never> {
+    func getTopRatedMovies() -> AnyPublisher<[Movie], Never> {
         var request = URLRequest(url: baseUrl)
         request.httpMethod = "GET"
         
@@ -37,8 +37,8 @@ class MovieAPI: MovieProvider {
             .dataTaskPublisher(for: request) //publish data and response or url error Pub<(Data, URLResponse), URLError>
             .map { $0.data } //publish data
             .decode(type: MovieAPIResponse.self, decoder: MovieAPI.decoder) // publish MovirAPIResponse
-            .map { $0.results } // publish [MovieDetails]
-            .catch { _ in Just<[MovieDetails]>([]) } // replace error with empty []
+            .map { $0.results } // publish [Movie]
+            .catch { _ in Just<[Movie]>([]) } // replace error with empty []
             .eraseToAnyPublisher()
     }
     

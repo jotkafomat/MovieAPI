@@ -1,5 +1,5 @@
 //
-//  MoviesTest.swift
+//  TopMoviesProviderTest.swift
 //  MovieAPITests
 //
 //  Created by Krzysztof Jankowski on 26/02/2021.
@@ -9,32 +9,32 @@ import Foundation
 import XCTest
 @testable import MovieAPI
 
-class MoviesTest: XCTestCase {
+class TopMoviesProviderTest: XCTestCase {
     
-    var movies: Movies!
+    var subject: TopMoviesProvider!
     var cancellable: AnyCancellable?
 
     override func setUpWithError() throws {
-        movies = Movies(movieProvider: MockMovieProvider.succesful)
+        subject = TopMoviesProvider(movieFetcher: MockMovieFetcher.succesful)
     }
 
     override func tearDownWithError() throws {
-        movies = nil
+        subject = nil
         cancellable?.cancel()
     }
 
     func testMovieProviderSucceess() throws {
         let expectation = XCTestExpectation(description: "expect movies not be nil")
         
-        cancellable = movies
-            .$moviesArray
+        cancellable = subject
+            .$movies
             .dropFirst()
             .sink {
-                values in
-                XCTAssertEqual(values.first?.title, "The Godfather")
+                movies in
+                XCTAssertEqual(movies.first?.title, "The Godfather")
                 expectation.fulfill()
             }
-        movies.getMovies()
+        subject.getMovies()
         wait(for: [expectation], timeout: 1.0)
     }
 

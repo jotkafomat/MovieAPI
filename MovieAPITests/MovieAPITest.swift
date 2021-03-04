@@ -40,7 +40,7 @@ class MovieAPITest: XCTestCase {
         
         let moviesLoaded = expectation(description: "movies get loaded")
         
-        cancellable = api.getMovieDetails().sink { movies in
+        cancellable = api.getTopRatedMovies().sink { movies in
             XCTAssertEqual(movies.count, 1)
             XCTAssertEqual(movies[0].title, "The Godfather")
             moviesLoaded.fulfill()
@@ -56,7 +56,7 @@ class MovieAPITest: XCTestCase {
         
         let moviesNotLoaded = expectation(description: "movies not loaded")
         
-        cancellable = api.getMovieDetails().sink { movies in
+        cancellable = api.getTopRatedMovies().sink { movies in
             XCTAssertTrue(movies.isEmpty)
             moviesNotLoaded.fulfill()
         }
