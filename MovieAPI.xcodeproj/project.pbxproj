@@ -144,10 +144,9 @@
 				E12B344325E7D35B00B015BF /* MovieAPITest.swift */,
 				E128DAF925E6ADEA008957F3 /* MovieAPIResponseTest.swift */,
 				E12B346625E9551A00B015BF /* TopMoviesProviderTest.swift */,
-				E128DB0B25E6AEFC008957F3 /* movieAPI.json */,
-				E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */,
-				E12B345825E7E46E00B015BF /* MockURLProtocol.swift */,
-				E12B346B25E9564200B015BF /* MockMoviesFetcher.swift */,
+				E1B45D9025F168E400510791 /* JSON */,
+				E1B45D8225F168C800510791 /* Helper */,
+				E1B45D8925F168D600510791 /* Mocks */,
 			);
 			path = MovieAPITests;
 			sourceTree = "<group>";
@@ -185,6 +184,31 @@
 				E12B344825E7D42600B015BF /* MovieApi.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E1B45D8225F168C800510791 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E128DAE225E6A54A008957F3 /* Data+Extenstion.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E1B45D8925F168D600510791 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E12B345825E7E46E00B015BF /* MockURLProtocol.swift */,
+				E12B346B25E9564200B015BF /* MockMoviesFetcher.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E1B45D9025F168E400510791 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E128DB0B25E6AEFC008957F3 /* movieAPI.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

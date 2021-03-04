@@ -24,7 +24,7 @@ class TopMoviesProviderTest: XCTestCase {
     }
 
     func testMovieProviderSucceess() throws {
-        let expectation = XCTestExpectation(description: "expect movies not be nil")
+        let expectation = XCTestExpectation(description: "expect movies not be empty")
         
         cancellable = subject
             .$movies
@@ -32,6 +32,21 @@ class TopMoviesProviderTest: XCTestCase {
             .sink {
                 movies in
                 XCTAssertEqual(movies.first?.title, "The Godfather")
+                expectation.fulfill()
+            }
+        subject.getMovies()
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testMovieProviderFails() throws {
+        let expectation = XCTestExpectation(description: "expect movies to be empty")
+        subject = TopMoviesProvider(movieFetcher: MockMovieFetcher.errorProne)
+        cancellable = subject
+            .$movies
+            .dropFirst()
+            .sink {
+                movies in
+                XCTAssert(movies.isEmpty)
                 expectation.fulfill()
             }
         subject.getMovies()
