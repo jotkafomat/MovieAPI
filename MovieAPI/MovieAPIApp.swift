@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MovieAPIApp: App {
+    var topMovieProvider = TopMoviesProvider(movieFetcher: MovieAPI())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(topMovies: topMovieProvider)
         }
     }
 }

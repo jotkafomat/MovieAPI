@@ -25,6 +25,7 @@
 		E12B346C25E9564200B015BF /* MockMoviesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12B346B25E9564200B015BF /* MockMoviesFetcher.swift */; };
 		E143C97025F15FA000FE65EC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E143C96F25F15FA000FE65EC /* Movie.swift */; };
 		E1B45D9625F16CD400510791 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E1B45D9525F16CD400510791 /* Kingfisher */; };
+		E1DE637125F673EE00439B51 /* MovieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DE637025F673EE00439B51 /* MovieRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		E12B346625E9551A00B015BF /* TopMoviesProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesProviderTest.swift; sourceTree = "<group>"; };
 		E12B346B25E9564200B015BF /* MockMoviesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMoviesFetcher.swift; sourceTree = "<group>"; };
 		E143C96F25F15FA000FE65EC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E1DE637025F673EE00439B51 /* MovieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E128DAA925E6A487008957F3 /* ContentView.swift */,
+				E1DE637025F673EE00439B51 /* MovieRowView.swift */,
 				E128DAA725E6A487008957F3 /* MovieAPIApp.swift */,
 				E143C97425F15FC500FE65EC /* Model */,
 				E1B45D7725F165D900510791 /* ViewModel */,
@@ -353,6 +356,7 @@
 				E12B346225E954EC00B015BF /* TopMoviesProvider.swift in Sources */,
 				E128DAEB25E6A732008957F3 /* MovieAPIResponse.swift in Sources */,
 				E143C97025F15FA000FE65EC /* Movie.swift in Sources */,
+				E1DE637125F673EE00439B51 /* MovieRowView.swift in Sources */,
 				E128DAAA25E6A487008957F3 /* ContentView.swift in Sources */,
 				E128DAA825E6A487008957F3 /* MovieAPIApp.swift in Sources */,
 				E12B344925E7D42600B015BF /* MovieApi.swift in Sources */,

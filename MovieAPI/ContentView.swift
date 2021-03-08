@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import Kingfisher
+
 
 struct ContentView: View {
+    @ObservedObject var topMovies: TopMoviesProvider
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(topMovies.movies) { movie in
+                        MovieRow(movie: movie)
+                    }
+                }
+                .onAppear{
+                    topMovies.getMovies()
+                }
+            }
+            .navigationTitle("Top Movies")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static var topMovieProvider = TopMoviesProvider(movieFetcher: MovieAPI())
     static var previews: some View {
-        ContentView()
+        ContentView(topMovies: topMovieProvider)
     }
 }
