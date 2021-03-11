@@ -13,16 +13,20 @@ struct MovieRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Color.secondary
+            Color(.separator)
                 .frame(height: 1)
             HStack(alignment: .top) {
-                KFImage(URL(string: movie.posterURL))
+                KFImage(movie.posterURL)
+                    .placeholder {
+                        PlaceholderPoster()
+                    }
                 Text(movie.title)
                     .font(.title)
             }
             Text(movie.overview)
                 .font(.footnote)
                 .fontWeight(.light)
+                .foregroundColor(.secondary)
                 .lineLimit(6)
                 .padding(.trailing)
         }

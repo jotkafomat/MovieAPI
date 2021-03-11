@@ -13,10 +13,10 @@ struct Movie: Decodable, Identifiable {
     let overview: String
     let posterPath: String
     
-    var posterURL: String {
+    var posterURL: URL? {
         let baseURL = "https://image.tmdb.org/t/p"
         let filesize = "/w92"
         let path = baseURL + filesize + posterPath
-        return path
+        return URL(string: path)        
     }
 }
