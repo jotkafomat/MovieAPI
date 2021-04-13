@@ -43,6 +43,7 @@ class MovieAPITest: XCTestCase {
         cancellable = api.getTopRatedMovies().sink { movies in
             XCTAssertEqual(movies.count, 1)
             XCTAssertEqual(movies[0].title, "The Godfather")
+            XCTAssertEqual(movies[0].posterURL, URL(string: "https://image.tmdb.org/t/p/w92/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"))
             moviesLoaded.fulfill()
         }
         waitForExpectations(timeout: 1)
